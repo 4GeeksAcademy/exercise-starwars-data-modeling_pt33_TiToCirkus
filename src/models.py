@@ -77,38 +77,7 @@ class Director(Base):
     name = Column(String(250), nullable=False)
     lastname = Column(String(250), nullable=False)
     edad = Column(Integer, nullable=False)
-    
-class Favorite_Planeta(Base):
-    __tablename__ = 'favorite_planeta'
-    id = Column(Integer, primary_key=True)
-    planeta = Column(Integer, ForeignKey("planeta.id"))
 
-    def to_dict(self):
-        return {}
-    
-class Favorite_Vehiculo(Base):
-    __tablename__ = 'favorite_vehiculo'
-    id = Column(Integer, primary_key=True)
-    vehiculo = Column(Integer, ForeignKey("vehiculo.id"))
-
-    def to_dict(self):
-        return {}
-    
-class Favorite_Personaje(Base):
-    __tablename__ = 'favorite_personaje'
-    id = Column(Integer, primary_key=True)
-    personaje = Column(Integer, ForeignKey("personaje.id"))
-
-    def to_dict(self):
-        return {}
-    
-class Favorite_Pelicula(Base):
-    __tablename__ = 'favorite_pelicula'
-    id = Column(Integer, primary_key=True)
-    pelicula = Column(Integer, ForeignKey("peliculas.id"))
-
-    def to_dict(self):
-        return {}
     
 class Favorite(Base):
     __tablename__ = 'favorite'
